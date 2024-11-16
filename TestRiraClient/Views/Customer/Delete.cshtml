@@ -1,0 +1,19 @@
+﻿@model CustomerModel
+<h1>آیا از حذف رکورد مطمپن هستید</h1>
+<form asp-controller="Customer" asp-action="Delete">
+    <div class="form-group">
+        <label for="name">Name </label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" asp-for="@Model.Name">
+    </div>
+    <div class="form-group">
+        <label for="Family">Family </label>
+        <input type="text" class="form-control" id="Family" placeholder="Enter your Family" asp-for="@Model.Family">
+    </div>
+    <div class="form-group">
+        <label for="NationalCode">NationalCode </label>
+        <input type="text" class="form-control" id="NationalCode" placeholder="Enter your NationalCode" asp-for="@Model.NationalCode">
+    </div>
+    <input type="hidden" asp-for="@Model.Id" />
+
+    <button type="submit" class="btn btn-primary">بله</button>
+</form>

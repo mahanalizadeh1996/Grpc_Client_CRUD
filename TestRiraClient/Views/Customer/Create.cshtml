@@ -1,0 +1,19 @@
+﻿@model CustomerModel
+
+<form asp-controller="Customer" asp-action="Create">
+    <div class="form-group">
+        <label for="name">Name </label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" asp-for="@Model.Name">
+    </div>
+    <div class="form-group">
+        <label for="Family">Family </label>
+        <input type="text" class="form-control" id="Family" placeholder="Enter your Family" asp-for="@Model.Family">
+    </div>
+    <div class="form-group">
+        <label for="NationalCode">NationalCode </label>
+        <input type="text" class="form-control" id="NationalCode" placeholder="Enter your NationalCode" asp-for="@Model.NationalCode">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option csharp_namespace = "TestRira.Protos";
+
+
+
+
+
+message Customer
+{
+	int32 Id = 1;
+    string Name = 2;
+    string Family = 3;
+    string NationalCode = 4;
+}
+
+message Empty {
+    int32 status=1;
+    string message=2;
+}
+
+message Customers {
+    repeated Customer items = 1;
+}
+
+message IdFilter {
+    int32 RowId = 1;
+}
+
+service CustomerService{
+	rpc Post(Customer) returns(Empty);
+	rpc GetAll(Empty) returns(Customers);
+    rpc Put(Customer) returns(Empty);
+    rpc GetById(IdFilter) returns(Customer);
+    rpc Delete(Customer) returns(Empty);
+}
